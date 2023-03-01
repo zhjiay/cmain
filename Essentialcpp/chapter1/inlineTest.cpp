@@ -9,8 +9,9 @@ bool isSizeOK(int size){
         cerr<<"wrong size";
         return false;
     }
-    return truel
+    return true;
 }
+
 
 
 
