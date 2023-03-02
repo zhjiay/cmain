@@ -1,19 +1,18 @@
 #include <iostream>
+#include<string>
+#include<vector>
+#include<fstream>
 
 using namespace std;
 
 
-void randTest(){
-    // srand(50);
-    for(int i=0;i<10;i++){
-        cout<<rand()%10<<endl;
-    }
+void writeFilePath(){
+    string fileDir="E:/data/3D0221/";
 }
 
 int main(){
     cout<<"hello test"<<endl;
 
-    randTest();
 
     return 0;
 }
