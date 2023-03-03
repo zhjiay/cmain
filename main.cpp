@@ -69,8 +69,18 @@ void testVEC(){
     cout<<"index "<<index;
 }
 
+void testBreak(){
+    for(int i=0;i<5;i++){
+        for(int ii=0;ii<5;ii++){
+            if(i==2&&ii==2) continue;
+            
+            cout<<"i: "<<i<<"\tii: "<<ii<<endl;
+        }
+    }
+}
+
 int main(){
-    testVEC();
+    testBreak();
 
     return 0;
 }
