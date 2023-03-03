@@ -5,7 +5,7 @@ using namespace std;
 
 
 bool compare(int a,int b){
-    return a<=b;
+    return a>=b;
 } 
 
 void swap(int &a,int &b){
@@ -14,7 +14,7 @@ void swap(int &a,int &b){
     a=temp;
 }
 
-void sort(vector<int> *vec,bool (*comp)(int,int)){
+inline void sort(vector<int> *vec,bool (*comp)(int,int)){
     if((*vec).size()<=1){
         return ;
     }else{
