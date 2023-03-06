@@ -79,8 +79,43 @@ void testBreak(){
     }
 }
 
-int main(){
-    testBreak();
+int fileTest(){//获取calibrate 图作为 product 图
+    vector<string> file_list;
+    std::string calibTxt="E:/data/3D0221/calib.txt";
+    string proTxt="E:/data/3D0221/produC.txt";
+    ifstream ifile(calibTxt);
+    if(!ifile) return -1;
+    string str;
+    while (getline(ifile,str))
+    {
+        file_list.emplace_back(str);
+    }
+    if(file_list.size()%12 !=0) return -2;
+    cout<<"filelist size :"<<file_list.size()<<endl;
 
+    const int DLP=780;//每个高度5组，只取第一组
+    int height=9;
+    vector<string> pro_list;
+    for(int i=0;i<4;i++){
+        int begin=i*DLP+height*5*12;
+        for(int j=0;j<12;j++){
+            pro_list.emplace_back(file_list[begin+j]);
+        }
+    }
+    cout<<"pro_list size :"<<pro_list.size();
+
+    ofstream ofile(proTxt);
+    if(!ofile) return -3;
+    for(string s : pro_list){
+        ofile<<s<<endl;
+    }
+    ofile.close();
+    return 0;
+    
+}
+
+int main(){
+    int result = fileTest();
+    cout<<endl<<"result:"<<result;
     return 0;
 }

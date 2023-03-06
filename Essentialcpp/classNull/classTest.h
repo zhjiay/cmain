@@ -2,10 +2,9 @@
 #include<string>
 using namespace std;
 
-class Stack
-{
-private:
-    vector<string> _stack;
+class Stack{
+    private:
+        vector<string> _stack;
 public:
     Stack();
     ~Stack();
@@ -21,13 +20,3 @@ public:
         return _stack.size();
     }
 };
-
-Stack::Stack(/* args */)
-{
-}
-
-Stack::~Stack()
-{
-}
-
-inline 
