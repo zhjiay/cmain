@@ -31,11 +31,11 @@ Stack::~Stack()
 {
 }
 
-inline bool Stack::empty(){
+bool Stack::empty(){
     return _stack.empty();
 }
 
-inline bool Stack::full(){
+bool Stack::full(){
     return _stack.size()==_stack.max_size();
 }
 
