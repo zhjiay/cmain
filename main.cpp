@@ -113,8 +113,34 @@ int fileTest(){//获取calibrate 图作为 product 图
     return 0;
 }
 
+void calculate(){
+    double data[7]={118.1548833,
+118.0927167,
+118.0708667,
+117.8135667,
+118.19795,
+117.7323667,
+118.2573167};
+    
+    double average=0.;
+    double diff=0.;
+
+    for(int i=0;i<7;i++){
+        average+=data[i]/7;
+    }
+    cout<<"average: "<<average<<endl;
+
+    double temp=0.;
+    for(int i=0;i<7;i++){
+        temp+=(data[i]-average)*(data[i]-average);
+    }
+    diff=sqrt(temp/6);
+    cout<<"diff: "<<diff;
+
+}
+
 int main(){
-    int result = fileTest();
-    cout<<endl<<"result:"<<result;
+    calculate();
+
     return 0;
 }
