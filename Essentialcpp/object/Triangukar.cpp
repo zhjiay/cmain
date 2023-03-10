@@ -41,6 +41,6 @@ int main(){
 
     cout<<tr.to_string();
 
- 
+
     return 0;
 }
