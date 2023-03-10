@@ -114,13 +114,13 @@ int fileTest(){//获取calibrate 图作为 product 图
 }
 
 void calculate(){
-    double data[7]={118.1548833,
-118.0927167,
-118.0708667,
-117.8135667,
-118.19795,
-117.7323667,
-118.2573167};
+    double data[7]={5515.8226,
+5515.0408,
+5515.8532,
+5515.0938,
+5515.6398,
+5514.9336,
+5514.5368};
     
     double average=0.;
     double diff=0.;
@@ -139,8 +139,12 @@ void calculate(){
 
 }
 
-int main(){
-    calculate();
 
+
+int main(){
+    float f=323.4;
+    unsigned char uc=f;
+    cout<<f<<"\t"<<(int)uc;
+    
     return 0;
 }
